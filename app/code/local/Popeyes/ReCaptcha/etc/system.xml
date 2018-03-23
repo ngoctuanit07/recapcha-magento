@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <popeyes_recaptcha_tab translate="label" module="recaptcha">
+            <label>Popeyes Login</label>
+            <sort_order>1</sort_order>
+        </popeyes_recaptcha_tab>
+    </tabs>
+    <sections>
+        <popeyes_recaptcha_sections translate="label" module="recaptcha">
+            <label>reCaptcha Login Google</label>
+            <tab>popeyes_recaptcha_tab</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+ 
+            <groups>
+                <popeyes_recaptcha_group translate="label" module="recaptcha">
+                    <label>General Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+ 
+                    <fields>
+                        <popeyes_recaptcha_status translate="label">
+                            <label>Enable reCaptcha</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </popeyes_recaptcha_status>
+                        <popeyes_recaptcha_site_key translate="label">
+                            <label>Site key </label>
+                            <comment><a href="https://www.google.com/recaptcha/admin#list">Get site key</a> </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </popeyes_recaptcha_site_key>
+                        <popeyes_recaptcha_secret_key translate="label">
+                            <label>Secret key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </popeyes_recaptcha_secret_key>
+                    </fields>
+
+                </popeyes_recaptcha_group>
+            </groups>
+        </popeyes_recaptcha_sections>
+    </sections>
+</config>

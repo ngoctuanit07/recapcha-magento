@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <customer_account_login>
+        <reference name="head">
+            <action method="addItem" ifconfig="popeyes_recaptcha_sections/popeyes_recaptcha_group/popeyes_recaptcha_status">
+                <type>skin_js</type>
+                <name>js/reCaptcha.js</name>
+            </action>
+        	<block type="core/text" name="google.recaptcha.cdn">
+            <action method="setText" ifconfig="popeyes_recaptcha_sections/popeyes_recaptcha_group/popeyes_recaptcha_status">
+                <text><![CDATA[<script src="https://www.google.com/recaptcha/api.js?hl=vi"></script>]]></text>
+            </action>
+        </block>
+    	</reference>
+    	<reference name="customer_form_login">
+    		<block type="recaptcha/recaptcha" name="recaptcha_login" template="recaptcha/login/captcha.phtml"/>
+    	</reference>
+    </customer_account_login>
+    <lotusbreath_onestepcheckout_index_index>
+        <reference name="head">
+            <action method="addItem" ifconfig="popeyes_recaptcha_sections/popeyes_recaptcha_group/popeyes_recaptcha_status">
+                <type>skin_js</type>
+                <name>js/reCaptcha.js</name>
+            </action>
+            <block type="core/text" name="google.recaptcha.cdn">
+            <action method="setText" ifconfig="popeyes_recaptcha_sections/popeyes_recaptcha_group/popeyes_recaptcha_status">
+                <text><![CDATA[<script src="https://www.google.com/recaptcha/api.js?hl=vi"></script>]]></text>
+            </action>
+        </block>
+        </reference>
+        <reference name="onestepcheckout.login">
+            <block type="recaptcha/recaptcha" name="recaptcha_login_onestepcheckout" template="recaptcha/login/captcha.phtml"/>
+        </reference>
+    </lotusbreath_onestepcheckout_index_index>
+</layout>

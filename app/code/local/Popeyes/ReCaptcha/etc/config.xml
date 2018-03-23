@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Popeyes_ReCaptcha>
+      <version>0.1.0</version>
+    </Popeyes_ReCaptcha>
+  </modules>
+  <global>
+    <helpers>
+      <recaptcha>
+        <class>Popeyes_ReCaptcha_Helper</class>
+      </recaptcha>
+    </helpers>
+    <blocks>
+      <recaptcha>
+        <class>Popeyes_ReCaptcha_Block</class>
+      </recaptcha>
+    </blocks>
+  </global>
+  <frontend>
+    <layout>
+      <updates>
+        <recaptcha>
+          <file>popeyes_recaptcha.xml</file> 
+        </recaptcha>
+      </updates>
+    </layout>
+    <routers>
+      <customer>
+        <args>
+          <modules>
+            <Popeyes_ReCaptcha before="Mage_Customer">Popeyes_ReCaptcha</Popeyes_ReCaptcha>
+          </modules>
+        </args>
+      </customer>
+    </routers>
+  </frontend>
+</config> 

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+<acl>
+    <resources>
+        <admin>
+            <children>
+                <system>
+                    <children>
+                        <config>
+                            <children>
+                                <popeyes_recaptcha_sections translate="title" module="recaptcha">
+                                    <title>reCaptcha Login Google</title>
+                                    <sort_order>1</sort_order>
+                                </popeyes_recaptcha_sections>
+                            </children>
+                        </config>
+                    </children>
+                </system>
+            </children>
+        </admin>
+    </resources>
+</acl>
+</config>
